@@ -5,7 +5,7 @@ services:
         restart: always
         environment: 
             MYSQL_ROOT_PASSWORD: password
-            MYSQL_DATABASE: rails-mysql
+            MYSQL_DATABASE: docker-rails
             MYSQL_USER: appuser
             MYSQL_PASSWORD: password
         ports: 
@@ -14,7 +14,7 @@ services:
         build: .
         command: bundle exec rails s -p 3000 -b '0.0.0.0'
         volumes: 
-            - ".:/rails-mysql"
+            - ".:/docker-rails"
         depends_on: 
             - db
         ports:
