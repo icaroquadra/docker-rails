@@ -2,6 +2,7 @@
 
 # To create the project just use the command in terminal:
     docker-compose run app rails new . --force --database=mysql --skip-bundle
-to install new Gems
+    
+# Use all the comands with this prefix
 
-    docker-compose run app bundle install
+    docker-compose run --rm app
